@@ -19,11 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var mysql = require("mysql");
+/*var mysql = require("mysql");
 //Database connection
 app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
-		host     : '127.0.0.1', 
+		host     : 'change.me.!!!.:)', 
 		user     : 'dba',
 		password : 'project',
 		database : 'test'
@@ -31,7 +31,7 @@ app.use(function(req, res, next){
 	res.locals.connection.connect();
 	next();
 });
-
+*/
 app.use('/', indexRouter);
 app.use('/api/v1/benchmark', benchmarkRouter)
 
