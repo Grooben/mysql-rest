@@ -19,19 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*var mysql = require("mysql");
-//Database connection
-app.use(function(req, res, next){
-	res.locals.connection = mysql.createConnection({
-		host     : 'change.me.!!!.:)', 
-		user     : 'dba',
-		password : 'project',
-		database : 'test'
-	});
-	res.locals.connection.connect();
-	next();
-});
-*/
 app.use('/', indexRouter);
 app.use('/api/v1/benchmark', benchmarkRouter)
 
