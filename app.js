@@ -23,7 +23,7 @@ var mysql = require("mysql");
 //Database connection
 app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
-		host     : 'change.me.!!!.:)', 
+		host     : '127.0.0.1', 
 		user     : 'dba',
 		password : 'project',
 		database : 'test'
